@@ -1,29 +1,46 @@
-void setup()
-{
-	noLoop();
+int size = 150;
+
+void setup() {
+	//noLoop();
+  size(500, 500);
 }
-void draw()
-{
-	//your code here
+
+void draw() {
+  strokeWeight(3);
+  rect(width/2 - size/2, height/2 - size/2, size, size, 7);
 }
-void mousePressed()
-{
+
+void mousePressed() {
 	redraw();
 }
-class Die //models one single dice cube
-{
+
+class DieSpot { //models one single dice cube
 	//variable declarations here
+  int x;
+  int y;
+  int side;
 	
-	Die(int x, int y) //constructor
-	{
+	DieSpot(int x, int y) { //constructor
 		//variable initializations here
 	}
-	void roll()
-	{
-		//your code here
+	
+  void roll() {
+    side = (int)(Math.random()*6+1);
 	}
-	void show()
-	{
-		//your code here
+	
+  void display() {
+    if (side == 1) {
+        System.out.println("1");
+    } else if (side == 2) {
+        
+    } else if (side == 3) {
+        
+    } else if (side == 4) {
+        
+    } else if (side == 5) {
+        
+    } else if (side == 6) {
+        
+    }
 	}
 }
