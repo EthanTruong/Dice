@@ -3,11 +3,23 @@ int size = 150;
 void setup() {
 	//noLoop();
   size(500, 500);
+  background(230);
 }
 
 void draw() {
   strokeWeight(3);
   rect(width/2 - size/2, height/2 - size/2, size, size, 7);
+  
+  fill(255, 0, 0);
+  //fill(230);
+  
+  noStroke();
+  rect(width/2 - size/2, height/2 - size/2 - size - 1, size, size);
+  
+  rect(width/2 - size/2, height/2 - size/2 + size + 2, size, size);
+  
+  stroke(0);
+  fill(255);
 }
 
 void mousePressed() {
