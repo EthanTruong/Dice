@@ -1,4 +1,7 @@
 int size = 150;
+int diceNum = 0;
+
+sideSpot[] sideSpots = new sideSpot[999];
 
 void setup() {
 	//noLoop();
@@ -23,36 +26,39 @@ void draw() {
 }
 
 void mousePressed() {
-	redraw();
+  sideSpots[diceNum] = new sideSpot(100, (int)(Math.random()*6+1));
+  sideSpots[diceNum].display();
+  diceNum++;
+	//redraw();
 }
 
-class DieSpot { //models one single dice cube
+class sideSpot { //models one single dice cube
 	//variable declarations here
-  int x;
-  int y;
+  int yPos;
   int side;
 	
-	DieSpot(int x, int y) { //constructor
-		//variable initializations here
+	sideSpot(int y, int sideDot) { //constructor
+    yPos = y;
+		side = sideDot;
 	}
-	
-  void roll() {
-    side = (int)(Math.random()*6+1);
-	}
+
+  void move() {
+    yPos++;
+  }
 	
   void display() {
     if (side == 1) {
         System.out.println("1");
     } else if (side == 2) {
-        
+        System.out.println("2");
     } else if (side == 3) {
-        
+        System.out.println("3");
     } else if (side == 4) {
-        
+        System.out.println("4");
     } else if (side == 5) {
-        
+        System.out.println("5");
     } else if (side == 6) {
-        
+        System.out.println("6");
     }
 	}
 }
