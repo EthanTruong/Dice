@@ -49,6 +49,7 @@ class Die //models one single dice cube
     yPos = y;
     roll();
     }
+    
     void roll()
     {
     dSide = (int)(Math.random()*6+1);
@@ -62,7 +63,7 @@ class Die //models one single dice cube
     else if (dSide == 2)
     {
       point(xPos + 15, yPos + 15);
-      point(xPos + 25, yPos + 25);
+      point(xPos + 35, yPos + 35);
     }
     else if (dSide == 3)
     {
@@ -79,7 +80,6 @@ class Die //models one single dice cube
     }
     else if (dSide == 5)
     {
-      strokeWeight(6);
       point(xPos + 10, yPos + 10);
       point(xPos + 40 , yPos + 10);
       point(xPos + 25, yPos + 25);
@@ -88,7 +88,6 @@ class Die //models one single dice cube
     }
     else if (dSide == 6)
     {
-      strokeWeight(6);
       point(xPos + 10, yPos + 10);
       point(xPos + 10 , yPos + 25);
       point(xPos + 10, yPos + 40);
@@ -106,33 +105,6 @@ class Die //models one single dice cube
     dSide = (int)(Math.random()*6+1);
     stroke(dotClr1, dotClr2, dotClr3);
     strokeWeight(10);
-    if (dSide == 1) {
-      point(xPos + 25, yPos + 25);
-    } else if (dSide == 2) {
-      point(xPos + 15, yPos + 15);
-      point(xPos + 35, yPos + 35);
-    } else if (dSide == 3) {
-      point(xPos + 10, yPos + 10);
-      point(xPos + 25, yPos + 25);
-      point(xPos + 40, yPos + 40);
-    } else if (dSide == 4) {
-      point(xPos + 10, yPos + 10);
-      point(xPos + 40 , yPos + 10);
-      point(xPos + 10, yPos + 40);
-      point(xPos + 40, yPos + 40);
-    } else if (dSide == 5) {
-      point(xPos + 10, yPos + 10);
-      point(xPos + 40 , yPos + 10);
-      point(xPos + 25, yPos + 25);
-      point(xPos + 10, yPos + 40);
-      point(xPos + 40, yPos + 40);
-    } else if (dSide == 6) {
-      point(xPos + 10, yPos + 10);
-      point(xPos + 10 , yPos + 25);
-      point(xPos + 10, yPos + 40);
-      point(xPos + 40, yPos + 10);
-      point(xPos + 40, yPos + 25);
-      point(xPos + 40, yPos + 40);
-    }
+    roll();
   }
 }
